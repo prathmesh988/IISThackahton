@@ -1,7 +1,7 @@
 // const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 // // Access your API key as an environment variable (see "Set up your API key" above)
-// const genAI = new GoogleGenerativeAI("AIzaSyB-0oFFzbY798C9t2WgwAmrQuRjXPbhQQU");
+// const genAI = new GoogleGenerativeAI("");
 
 // async function run() {
 //   // For text-only input, use the gemini-pro model
@@ -37,7 +37,7 @@ import OpenAI from "openai";
 // const OpenAI = require("openai");
 
 const openai = new OpenAI({
-  apiKey: "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",
+  apiKey: process.env.API_KEY,
 });
 async function main(messagearray) {
   const completion = await openai.chat.completions.create({
